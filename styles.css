@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,500&family=Unbounded:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: url('https://ucscextension-live-28cd95cf77884d15bb06-01c17c1.divio-media.net/images/data-structures-and-algorith.2e16d0ba.fill-2400x858-c100.jpg') no-repeat center center fixed;
+    background-color: wheat;
+    background-size: cover;
+    color: aqua;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Prevents scrollbar due to animations */
+}
+
+header {
+    position: absolute;
+    top: 20px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 50px;
+    font-family: 'Unbounded', Arial, sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    animation: glow 5s infinite alternate;
+    
+
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    }
+    to {
+        box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+    }
+}
+
+.button-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sorting-container {
+    left: 20%;
+    animation: moveUp 5s infinite alternate ease-in-out;
+}
+
+.searching-container {
+    right: 20%;
+    animation: moveDown 5s infinite alternate ease-in-out;
+}
+
+button {
+    width: 250px; /* Increased size */
+    height: 150px; /* Increased size */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Improves text readability on image */
+    font-family: 'Fira Sans', Arial, sans-serif;
+}
+
+.button.sorting {
+    color: rgb(244, 6, 6);
+    font-size: 210%;
+    background-image: url('../sorting.png'); /* Replace with actual image path */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), -1px -1px 2px rgba(255, 255, 255, 0.7); /* Enhanced text shadow for better readability */
+}
+
+.button.searching {
+    color: rgb(244, 6, 6);
+    ;
+    font-size: 210%;
+    background-image: url('../searching.png'); /* Replace with actual image path */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7), -1px -1px 2px rgba(255, 255, 255, 0.7); /* Enhanced text shadow for better readability */
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
